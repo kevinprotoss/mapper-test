@@ -11,9 +11,9 @@ public class App {
     }
 
     public static void main(String[] args) {
-        SSEL2_Quotation quotation1 = new SSEL2_Quotation();
-        quotation1.TotalNo = 31313;
-        Quote quote2 = DatastreamMapper.MAPPER.map(quotation1);
-        System.out.println(quote2.getNumTrades());
+        SSEL2_Quotation quotation = new SSEL2_Quotation();
+        quotation.TotalNo = 31313;
+        Quote quote = DatastreamMapper.MAPPER.map(quotation);
+        System.out.println(quote.getNumTrades());
     }
 }
