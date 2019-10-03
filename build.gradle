@@ -1,0 +1,33 @@
+plugins {
+  id 'java'
+  id 'application'
+}
+
+allprojects {
+  repositories {
+    maven {
+      url "https://jitpack.io"
+    }
+  }
+}
+
+repositories {
+  mavenCentral()
+  jcenter()
+}
+
+dependencies {
+  // 使用classifier加载所有传递依赖
+  implementation 'com.github.JupiterFund:jupiter-commons:master-SNAPSHOT:all'
+  // 逐一加载所需依赖
+  // implementation 'com.github.JupiterFund:jupiter-commons:master-SNAPSHOT
+  // implementation 'com.github.JupiterFund:jupiterapis:master-SNAPSHOT'
+  // implementation 'com.github.JupiterFund:jupiter-lib:master-SNAPSHOT:all'
+
+  // Use JUnit test framework
+  testImplementation 'junit:junit:4.12'
+}
+
+application {
+  mainClassName = 'com.test.app.App'
+}
